@@ -7,6 +7,7 @@ export class SubjectService {
   findAll(): InterfaceSubject[] {
     return SUBJECTS;
   }
+
   createNewSubject({ name }: InterfacePostSubject): InterfaceSubject[] {
     const sortedByIdSubject = SUBJECTS.sort((a, b) => a.id - b.id);
     const newId = sortedByIdSubject[sortedByIdSubject.length - 1].id + 1;
